@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment (secrets — never commit)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Optional: coverage / build
+coverage/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+attendance.db
