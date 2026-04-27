@@ -294,7 +294,12 @@ def format_dt(value: str) -> str:
 
 def show_admin_ui() -> None:
     st.title("QR Attendance Admin")
+    if "admin_user" not in st.session_state:
+        st.session_state.admin_user = None
+    if st.session_state.admin_user:
+        st.autorefresh(interval = 5000,key = "refresh")
     st.caption("Create sessions, share QR links, and review attendance.")
+    
 
     if "admin_user" not in st.session_state:
         st.session_state.admin_user = None
